@@ -2,5 +2,6 @@
 <b>[Play!](https://philipburesh.github.io/Battleships-in-the-Bikini-Bottom/)</b><br>
 <br>
 <br>
+![](https://media.tenor.com/jxeYaagGjocAAAAi/spongebob-fast.gif)
 PS: Horší kód jste ještě neviděli :)
 
