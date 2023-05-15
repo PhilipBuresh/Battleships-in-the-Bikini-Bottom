@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
+    <title>Battleships</title>
+</head>
+<body>
+    <audio id="music1" src = "./res/audio/menu.mp3" type="audio/mpeg"></audio>
+    <audio id="music2" src = "./res/audio/ukulele.mp3" type="audio/mpeg"></audio>
+    <audio id="music3" src = "./res/audio/game.mp3" type="audio/mpeg"></audio>
+    <audio id="bubbles" src = "./res/audio/bubbles.mp3" type="audio/mpeg"></audio>
+    <div id="container">
+        <img id="bubble" draggable="false" src="./res/gif/bubble.gif" alt="bubble">
+        <div id="lobby">
+            <h1>Battleships in Bikini Bottom</h1>
+            <h2> <span id="pat"> Patrick</span> vs.<span id="spo"> Spongebob</span></h2>
+            <div id="play">Play</div>
+            <img id="fight" src="./res/img/fight.png" alt="fight">
+        </div>
+        <img id="screen" draggable="false" src="./res/img/black.png" alt="black">
+        <div id="game">
+            <img id="patrick" draggable="false" src="./res/img/patrick.png" alt="patrick">
+            <img id="spongebob" draggable="false" src="./res/img/spongebob.png" alt="spongebob">
+            <div id="setboats">Place your Boats</div>
+            <p id="counter">Boats: 5</p>
+            <div id="patrickBoats">
+                <p>Patrick's Boats</p>
+                <span id="myCounter">5</span>
+            </div>
+            <table id="myTable">
+                <tr>
+                    <th id="num-let"></th>
+                    <th id="num-let">A</th>
+                    <th id="num-let">B</th>
+                    <th id="num-let">C</th>
+                    <th id="num-let">D</th>
+                    <th id="num-let">E</th>
+                </tr>
+                <tr>
+                    <th id="num-let">1</th>
+                    <td id="a01"><img id="boat01" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a02"><img id="boat02" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a03"><img id="boat03" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a04"><img id="boat04" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a05"><img id="boat05" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                </tr>
+                <tr>
+                    <th id="num-let">2</th>
+                    <td id="a06"><img id="boat06" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a07"><img id="boat07" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a08"><img id="boat08" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a09"><img id="boat09" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a10"><img id="boat10" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                </tr>
+                <tr>
+                    <th id="num-let">3</th>
+                    <td id="a11"><img id="boat11" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a12"><img id="boat12" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a13"><img id="boat13" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a14"><img id="boat14" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a15"><img id="boat15" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                </tr>
+                <tr>
+                    <th id="num-let">4</th>
+                    <td id="a16"><img id="boat16" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a17"><img id="boat17" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a18"><img id="boat18" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a19"><img id="boat19" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a20"><img id="boat20" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                </tr>
+                <tr>
+                    <th id="num-let">5</th>
+                    <td id="a21"><img id="boat21" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a22"><img id="boat22" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a23"><img id="boat23" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a24"><img id="boat24" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    <td id="a25"><img id="boat25" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                </tr>
+            </table>
+
+                <img id="arrow" src="./res/img/arrow.png" alt="arrow">
+
+            <section id="table2">
+                <table id="botTable">
+                    <tr>
+                        <th id="num-let2"></th>
+                        <th id="num-let2">A</th>
+                        <th id="num-let2">B</th>
+                        <th id="num-let2">C</th>
+                        <th id="num-let2">D</th>
+                        <th id="num-let2">E</th>
+                    </tr>
+                    <tr>
+                        <th id="num-let2">1</th>
+                        <td id="b01"><img id="bot_boat01" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b02"><img id="bot_boat02" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b03"><img id="bot_boat03" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b04"><img id="bot_boat04" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b05"><img id="bot_boat05" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    </tr>
+                    <tr>
+                        <th id="num-let2">2</th>
+                        <td id="b06"><img id="bot_boat06" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b07"><img id="bot_boat07" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b08"><img id="bot_boat08" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b09"><img id="bot_boat09" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b10"><img id="bot_boat10" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    </tr>
+                    <tr>
+                        <th id="num-let2">3</th>
+                        <td id="b11"><img id="bot_boat11" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b12"><img id="bot_boat12" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b13"><img id="bot_boat13" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b14"><img id="bot_boat14" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b15"><img id="bot_boat15" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    </tr>
+                    <tr>
+                        <th id="num-let2">4</th>
+                        <td id="b16"><img id="bot_boat16" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b17"><img id="bot_boat17" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b18"><img id="bot_boat18" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b19"><img id="bot_boat19" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b20"><img id="bot_boat20" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    </tr>
+                    <tr>
+                        <th id="num-let2">5</th>
+                        <td id="b21"><img id="bot_boat21" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b22"><img id="bot_boat22" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b23"><img id="bot_boat23" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b24"><img id="bot_boat24" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                        <td id="b25"><img id="bot_boat25" draggable="false" src="./res/img/boat.png" alt="boat"></td>
+                    </tr>
+                </table>
+                <img id="boom1" src="./res/gif/boom.gif" alt="boom">
+                <img id="boom2" src="./res/gif/boom.gif" alt="boom">
+            </section>
+            
+            <div id="spongebobBoats">
+            <p>Spongebob's Boats</p>
+            <span id="hisCounter">5</span>
+            </div>
+        </div>
+        <div id="replay">
+            <div id="win">
+                <span id="who">Patrick</span> WON
+            </div>
+            <img id="patrick_win" draggable="false" src="./res/gif/win1.gif" alt="patrick">
+            <div id="play_again">Play Again</div>
+        </div>
+    </div>
+    
+    <script src="./res/js/main.js"></script>
+</body>
+</html>
+

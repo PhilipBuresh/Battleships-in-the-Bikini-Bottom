@@ -1,0 +1,333 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+div{
+    user-select: none;
+}
+#container{
+    overflow: hidden;
+}
+#music1, #music2, #music3{
+    position: absolute;
+    top:0%;
+    left:0%;
+    height: 0%;
+}
+#lobby{
+    height: 100vh;
+    width: auto;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:end;
+    align-items:center;
+    flex-direction: column;
+}
+#lobby h1{
+    margin-bottom:1em;
+    font-family: 'Slackey', cursive;
+    font-size:70px;
+}
+#lobby h2{
+    color:white;
+    font-family: 'Slackey', cursive;
+    font-size: 40px;
+}
+#pat{
+    color:rgb(221, 15, 129);
+    font-family: 'Slackey', cursive;
+    font-size:50px;
+}
+#spo{
+    color:rgb(255, 218, 8);
+    font-family: 'Slackey', cursive;
+    font-size:50px;
+}
+#play{
+    width: auto;
+    margin-top:2em;
+    padding: 0.5em;
+    font-size:40px;
+    background-color: orange;
+    border-radius: 10px;
+    color:white;
+    font-family: 'Slackey', cursive;
+    font-weight: 400;
+    letter-spacing: 2px;
+    box-shadow: rgba(0, 0, 0, 0.45) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+}
+#play:hover{
+    transform: scale(1.1);
+}
+#fight{
+    animation-duration: 1000ms;
+    animation-play-state: running;
+    animation-name: float;
+    animation-iteration-count: infinite;
+    margin-bottom: 10em;
+    margin-top:2em;
+}
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(10px);}
+    100% {transform:translateY(0);}
+}
+#screen{
+    opacity: 0%;
+    height: 100vh;
+    width: 100%;
+    display:none;
+    position: absolute;
+    z-index: 100;
+}
+#bubble{
+    height: 100%;
+    width: 100%;
+    display:none;
+    position: absolute;
+    z-index: 99;
+}
+#patrick{
+    position: absolute;
+    left:60px;
+    height: 400px;
+    width: auto;
+    bottom:30px;
+    /*transition: ease-in-out;
+    animation-duration: 1000ms;
+    animation-play-state: running;
+    animation-name: stand;
+    animation-iteration-count: infinite;*/
+}
+/*@keyframes stand {
+    0% {transform: scaleY(1);}
+    50% {transform: scaleY(1.03);}
+    100% {transform: scaleY(1);}
+}*/
+#spongebob{
+    position: absolute;
+    right:60px;
+    bottom:30px;
+    height: 400px;
+    width: auto;
+    display:none;
+}
+#game{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display:none;
+    background-image: url(../img/houses.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+#replay{
+    width: auto;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display:none;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+#win{
+    font-family: 'Slackey', cursive;
+    font-size: 80px;
+    text-shadow:2px 2px black;
+    color:white;
+}
+#patrick_win{
+    height: 300px;
+}
+#play_again{
+    width: auto;
+    margin-top:2em;
+    padding: 0.5em;
+    font-size:40px;
+    background-color: orange;
+    border-radius: 10px;
+    color:white;
+    font-family: 'Slackey', cursive;
+    font-weight: 400;
+    letter-spacing: 2px;
+    box-shadow: rgba(0, 0, 0, 0.45) 1.95px 1.95px 2.6px;
+    transition: 0.3s;
+}
+#play_again:hover{
+    transform: scale(1.1);
+}
+#setboats{
+    font-family: 'Slackey', cursive;
+    font-size:70px;
+    color:rgb(255, 255, 255);
+    text-shadow:2px 2px black;
+}
+#counter{
+    font-family: 'Slackey', cursive;
+    font-size: 50px;
+    color:rgb(255, 138, 234);
+    text-shadow:2px 2px black;
+    margin:1em;
+}
+#table2{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#boom2{
+    position: absolute;
+    height: 600px;
+    transform: translateY(-90px);
+    display:none;
+}
+#boom1{
+    position: absolute;
+    height: 600px;
+    transform: translateY(-90px);
+    transform: translateX(-500px);
+    display:none;
+}
+#patrickBoats{
+    position: absolute;
+    left:570px;
+    top:150px;
+    font-family: 'Slackey', cursive;
+    font-size:30px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    text-shadow:2px 2px black;
+    animation-duration: 1000ms;
+    animation-name: "none";
+    animation-play-state: paused;
+}
+#spongebobBoats{
+    position: absolute;
+    right:550px;
+    top:150px;
+    font-family: 'Slackey', cursive;
+    font-size:30px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    text-shadow:2px 2px black;
+    animation-duration: 1000ms;
+    animation-name: "none";
+    animation-play-state: paused;
+}
+#arrow{
+    height: 50px;
+    transform: rotate(180deg);
+    transition: 0.5s;
+    display: none;
+}
+#patrickBoats span{
+    color:rgb(233, 24, 194);
+    font-size:50px;
+    text-shadow:2px 2px black;
+}
+#myCounter, #hisCounter{
+    animation-duration: 700ms;;
+    animation-play-state: paused;
+    animation-name: none;
+}
+@keyframes counter1 {
+    0% {color:rgb(233, 24, 194);}
+    50% {color:red; font-size: 70px;}
+    100% {color:rgb(233, 24, 194);}
+}
+@keyframes counter2 {
+    0% {color:rgb(255, 251, 125);}
+    50% {color:red; font-size: 70px;}
+    100% {color:rgb(255, 251, 125);}
+}
+#spongebobBoats span{
+    font-size:50px;
+    color: rgb(255, 251, 125);
+    text-shadow:2px 2px black;
+}
+#myTable, #botTable{
+    font-family: 'Slackey', cursive;
+    animation-duration: 1000ms;
+    animation-name: "none";
+    animation-play-state: paused;
+}
+@keyframes disabled {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+#botTable{
+    display: none;
+}
+#myTable th, #botTable th{
+    border-radius: 10px;
+    min-width: 30px;
+}
+#myTable td,#botTable td{
+    height: 70px;
+    width: 70px;
+    padding: 0; 
+    margin: 0;
+    border-spacing: 0;
+    border-radius: 15px;
+}
+#myTable td{
+    border:3px solid rgb(0, 0, 0);
+}
+#botTable td{
+    border:3px solid rgb(0, 0, 0);
+    cursor:pointer;
+}
+#myTable tr,#botTable tr{
+    text-align: center;
+}
+#num-let{
+    background-color: rgb(228, 55, 197);
+    color:white;
+}
+#num-let2{
+    background-color: rgb(255, 247, 0);
+}
+#boat,#boat01,#boat02,#boat03,#boat04,#boat05,#boat06,#boat07,#boat08,#boat09,#boat10,#boat11,#boat12,#boat13,#boat14,#boat15,#boat16,#boat17,#boat18
+,#boat19,#boat20,#boat21,#boat22,#boat23,#boat24,#boat25, #bot_boat01,#bot_boat02,#bot_boat03,#bot_boat04,#bot_boat05,#bot_boat06,#bot_boat07,#bot_boat08,
+#bot_boat09,#bot_boat10,#bot_boat11,#bot_boat12,#bot_boat13,#bot_boat14,#bot_boat15,#bot_boat16,#bot_boat17,#bot_boat18
+,#bot_boat19,#bot_boat20,#bot_boat21,#bot_boat22,#bot_boat23,#bot_boat24,#bot_boat25{
+    height:55px;
+    width: 55px;
+    display: none;
+    margin:auto;
+}
+#bot_boat01,#bot_boat02,#bot_boat03,#bot_boat04,#bot_boat05,#bot_boat06,#bot_boat07,#bot_boat08, #bot_boat09,#bot_boat10,#bot_boat11,#bot_boat12,#bot_boat13,#bot_boat14,#bot_boat15,#bot_boat16,#bot_boat17,#bot_boat18
+,#bot_boat19,#bot_boat20,#bot_boat21,#bot_boat22,#bot_boat23,#bot_boat24,#bot_boat25{
+    opacity: 0%;
+}
+#a01, #a02, #a03, #a04, #a05, #a06, #a07, #a08, #a09, #a10, #a11, #a12, #a13, #a14, #a15, #a16, #a17, #a18, #a19, #a20, #a21, #a22, #a23, #a24, #a25, 
+#b01, #b02, #b03, #b04, #b05, #b06, #b07, #b08, #b09, #b10, #b11, #b12, #b13, #b14, #b15, #b16, #b17, #b18, #b19, #b20, #b21, #b22, #b23, #b24, #b25{
+    animation-duration: 1800ms;
+    background-color: rgba(255, 255, 255, 0.45);
+    animation-play-state: paused;
+    animation-name: none;
+}
+@keyframes damage {
+    0% {background-color: red;}
+    100% {background-color: rgba(255, 255, 255, 0.45);}
+}
