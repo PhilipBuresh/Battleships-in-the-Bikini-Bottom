@@ -3,6 +3,5 @@
 <br>
 <br>
 ![](https://media.tenor.com/jxeYaagGjocAAAAi/spongebob-fast.gif)
-<br>
-<b>PS: Horší kód jste ještě neviděli :)</b>
+
 
